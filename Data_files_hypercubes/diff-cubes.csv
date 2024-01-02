@@ -1,0 +1,193 @@
+From,To,P,F,label
+0,1,0.333333333333333,0.333333333333333,Null
+0,2,0.333333333333333,0.333333333333333,Null
+0,4,0.333333333333333,0.333333333333333,Null
+1,3,0.5,0.166666666666667,Null
+1,5,0.5,0.166666666666667,Null
+2,3,0.5,0.166666666666667,Null
+2,6,0.5,0.166666666666667,Null
+4,5,0.5,0.166666666666667,Null
+4,6,0.5,0.166666666666667,Null
+3,7,1,0.333333333333333,Null
+5,7,1,0.333333333333333,Null
+6,7,1,0.333333333333333,Null
+0,1,1,1,One path
+0,2,0,0,One path
+0,4,0,0,One path
+1,3,1,1,One path
+1,5,0,0,One path
+2,3,0.5,0,One path
+2,6,0.5,0,One path
+4,5,0.5,0,One path
+4,6,0.5,0,One path
+3,7,1,1,One path
+5,7,1,0,One path
+6,7,1,0,One path
+0,1,0.833333333333333,0.833333333333333,One path-small-noise
+0,2,0.0833333333333333,0.0833333333333333,One path-small-noise
+0,4,0.0833333333333333,0.0833333333333333,One path-small-noise
+1,3,0.909090909090909,0.757575757575758,One path-small-noise
+1,5,0.0909090909090909,0.0757575757575758,One path-small-noise
+2,3,0.5,0.0416666666666667,One path-small-noise
+2,6,0.5,0.0416666666666667,One path-small-noise
+4,5,0.5,0.0416666666666667,One path-small-noise
+4,6,0.5,0.0416666666666667,One path-small-noise
+3,7,1,0.799242424242424,One path-small-noise
+5,7,1,0.117424242424242,One path-small-noise
+6,7,1,0.0833333333333333,One path-small-noise
+0,1,0.5,0.5,One path-more-noise
+0,2,0.25,0.25,One path-more-noise
+0,4,0.25,0.25,One path-more-noise
+1,3,0.666666666666667,0.333333333333333,One path-more-noise
+1,5,0.333333333333333,0.166666666666667,One path-more-noise
+2,3,0.5,0.125,One path-more-noise
+2,6,0.5,0.125,One path-more-noise
+4,5,0.5,0.125,One path-more-noise
+4,6,0.5,0.125,One path-more-noise
+3,7,1,0.458333333333333,One path-more-noise
+5,7,1,0.291666666666667,One path-more-noise
+6,7,1,0.25,One path-more-noise
+0,1,0.5,0.5,Two paths
+0,2,0,0,Two paths
+0,4,0.5,0.5,Two paths
+1,3,1,0.5,Two paths
+1,5,0,0,Two paths
+2,3,0.5,0,Two paths
+2,6,0.5,0,Two paths
+4,5,0,0,Two paths
+4,6,1,0.5,Two paths
+3,7,1,0.5,Two paths
+5,7,1,0,Two paths
+6,7,1,0.5,Two paths
+0,1,0.476190476190476,0.476190476190476,Two paths-small-noise
+0,2,0.0476190476190476,0.0476190476190476,Two paths-small-noise
+0,4,0.476190476190476,0.476190476190476,Two paths-small-noise
+1,3,0.909090909090909,0.432900432900433,Two paths-small-noise
+1,5,0.0909090909090909,0.0432900432900433,Two paths-small-noise
+2,3,0.5,0.0238095238095238,Two paths-small-noise
+2,6,0.5,0.0238095238095238,Two paths-small-noise
+4,5,0.0909090909090909,0.0432900432900433,Two paths-small-noise
+4,6,0.909090909090909,0.432900432900433,Two paths-small-noise
+3,7,1,0.456709956709957,Two paths-small-noise
+5,7,1,0.0865800865800866,Two paths-small-noise
+6,7,1,0.456709956709957,Two paths-small-noise
+0,1,0.4,0.4,Two paths-more-noise
+0,2,0.2,0.2,Two paths-more-noise
+0,4,0.4,0.4,Two paths-more-noise
+1,3,0.666666666666667,0.266666666666667,Two paths-more-noise
+1,5,0.333333333333333,0.133333333333333,Two paths-more-noise
+2,3,0.5,0.1,Two paths-more-noise
+2,6,0.5,0.1,Two paths-more-noise
+4,5,0.333333333333333,0.133333333333333,Two paths-more-noise
+4,6,0.666666666666667,0.266666666666667,Two paths-more-noise
+3,7,1,0.366666666666667,Two paths-more-noise
+5,7,1,0.266666666666667,Two paths-more-noise
+6,7,1,0.366666666666667,Two paths-more-noise
+0,1,1,1,Branch
+0,2,0,0,Branch
+0,4,0,0,Branch
+1,3,0.5,0.5,Branch
+1,5,0.5,0.5,Branch
+2,3,0.5,0,Branch
+2,6,0.5,0,Branch
+4,5,0.5,0,Branch
+4,6,0.5,0,Branch
+3,7,1,0.5,Branch
+5,7,1,0.5,Branch
+6,7,1,0,Branch
+0,1,0.833333333333333,0.833333333333333,Branch-small-noise
+0,2,0.0833333333333333,0.0833333333333333,Branch-small-noise
+0,4,0.0833333333333333,0.0833333333333333,Branch-small-noise
+1,3,0.5,0.416666666666667,Branch-small-noise
+1,5,0.5,0.416666666666667,Branch-small-noise
+2,3,0.5,0.0416666666666667,Branch-small-noise
+2,6,0.5,0.0416666666666667,Branch-small-noise
+4,5,0.5,0.0416666666666667,Branch-small-noise
+4,6,0.5,0.0416666666666667,Branch-small-noise
+3,7,1,0.458333333333333,Branch-small-noise
+5,7,1,0.458333333333333,Branch-small-noise
+6,7,1,0.0833333333333333,Branch-small-noise
+0,1,0.5,0.5,Branch-more-noise
+0,2,0.25,0.25,Branch-more-noise
+0,4,0.25,0.25,Branch-more-noise
+1,3,0.5,0.25,Branch-more-noise
+1,5,0.5,0.25,Branch-more-noise
+2,3,0.5,0.125,Branch-more-noise
+2,6,0.5,0.125,Branch-more-noise
+4,5,0.5,0.125,Branch-more-noise
+4,6,0.5,0.125,Branch-more-noise
+3,7,1,0.375,Branch-more-noise
+5,7,1,0.375,Branch-more-noise
+6,7,1,0.25,Branch-more-noise
+0,1,0,0,One path2
+0,2,0,0,One path2
+0,4,1,1,One path2
+1,3,0.5,0,One path2
+1,5,0.5,0,One path2
+2,3,0.5,0,One path2
+2,6,0.5,0,One path2
+4,5,0,0,One path2
+4,6,1,1,One path2
+3,7,1,0,One path2
+5,7,1,0,One path2
+6,7,1,1,One path2
+0,1,0.0833333333333333,0.0833333333333333,One path2-small-noise
+0,2,0.0833333333333333,0.0833333333333333,One path2-small-noise
+0,4,0.833333333333333,0.833333333333333,One path2-small-noise
+1,3,0.5,0.0416666666666667,One path2-small-noise
+1,5,0.5,0.0416666666666667,One path2-small-noise
+2,3,0.5,0.0416666666666667,One path2-small-noise
+2,6,0.5,0.0416666666666667,One path2-small-noise
+4,5,0.0909090909090909,0.0757575757575758,One path2-small-noise
+4,6,0.909090909090909,0.757575757575758,One path2-small-noise
+3,7,1,0.0833333333333333,One path2-small-noise
+5,7,1,0.117424242424242,One path2-small-noise
+6,7,1,0.799242424242424,One path2-small-noise
+0,1,0.25,0.25,One path2-more-noise
+0,2,0.25,0.25,One path2-more-noise
+0,4,0.5,0.5,One path2-more-noise
+1,3,0.5,0.125,One path2-more-noise
+1,5,0.5,0.125,One path2-more-noise
+2,3,0.5,0.125,One path2-more-noise
+2,6,0.5,0.125,One path2-more-noise
+4,5,0.333333333333333,0.166666666666667,One path2-more-noise
+4,6,0.666666666666667,0.333333333333333,One path2-more-noise
+3,7,1,0.25,One path2-more-noise
+5,7,1,0.291666666666667,One path2-more-noise
+6,7,1,0.458333333333333,One path2-more-noise
+0,1,0,0,Branch2
+0,2,0,0,Branch2
+0,4,1,1,Branch2
+1,3,0.5,0,Branch2
+1,5,0.5,0,Branch2
+2,3,0.5,0,Branch2
+2,6,0.5,0,Branch2
+4,5,0.5,0.5,Branch2
+4,6,0.5,0.5,Branch2
+3,7,1,0,Branch2
+5,7,1,0.5,Branch2
+6,7,1,0.5,Branch2
+0,1,0.0833333333333333,0.0833333333333333,Branch2-small-noise
+0,2,0.0833333333333333,0.0833333333333333,Branch2-small-noise
+0,4,0.833333333333333,0.833333333333333,Branch2-small-noise
+1,3,0.5,0.0416666666666667,Branch2-small-noise
+1,5,0.5,0.0416666666666667,Branch2-small-noise
+2,3,0.5,0.0416666666666667,Branch2-small-noise
+2,6,0.5,0.0416666666666667,Branch2-small-noise
+4,5,0.5,0.416666666666667,Branch2-small-noise
+4,6,0.5,0.416666666666667,Branch2-small-noise
+3,7,1,0.0833333333333333,Branch2-small-noise
+5,7,1,0.458333333333333,Branch2-small-noise
+6,7,1,0.458333333333333,Branch2-small-noise
+0,1,0.25,0.25,Branch2-more-noise
+0,2,0.25,0.25,Branch2-more-noise
+0,4,0.5,0.5,Branch2-more-noise
+1,3,0.5,0.125,Branch2-more-noise
+1,5,0.5,0.125,Branch2-more-noise
+2,3,0.5,0.125,Branch2-more-noise
+2,6,0.5,0.125,Branch2-more-noise
+4,5,0.5,0.25,Branch2-more-noise
+4,6,0.5,0.25,Branch2-more-noise
+3,7,1,0.25,Branch2-more-noise
+5,7,1,0.375,Branch2-more-noise
+6,7,1,0.375,Branch2-more-noise
