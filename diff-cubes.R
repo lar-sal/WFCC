@@ -182,9 +182,9 @@ g.collection[[length(g.collection)+1]] = cubic.graph(df)
 df.collection = rbind(df.collection, df)
 
 # output plot
-png("diff-cubes.png", width=800*2, height=800*2, res=72*2)
+png("./Data_files_hypercubes/Outputs_github/diff-cubes.png", width=800*2, height=800*2, res=72*2)
 print(ggarrange(plotlist=g.collection))
 dev.off()
 
 # output cubes
-write.csv(df.collection, "diff-cubes.csv", row.names=FALSE, quote=FALSE)
+write.csv(df.collection, "./Data_files_hypercubes/Outputs_github/diff-cubes.csv", row.names=FALSE, quote=FALSE)
