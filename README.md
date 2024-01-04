@@ -11,7 +11,7 @@ The folder `Data_files_hypercubes` contains all the data files needed. `Klebsiel
 HyperTraPS was run using https://github.com/StochasticBiology/hypertraps-simple. HyperHMM was run using https://github.com/StochasticBiology/hypercube-hmm. 
 
 ### Citation
-If one uses the WFCC algorithm, our paper can be cited as
+If one uses the WFCC algorithm, it can be cited as
 
 ### References 
 The clinical data in `Klebsiella_clinical_data` was obtained from the following publications:
