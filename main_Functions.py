@@ -95,11 +95,11 @@ def compare(g0,g1, resolution = 1000, normalized=False, sort=False):
     return (filt_val,sym_card)
 
 
-def WFCC(g0, g1, label_g0, labels_g1, colors, log): #g1 is a list of graphs to compare with g0
+def WFCC(g0, g1, label_g0, labels_g1, colors, log, sort=False): #g1 is a list of graphs to compare with g0
     x=[]
     y=[]
     for g in g1:
-        x_val,y_val = compare(g0,g,1000,False)
+        x_val,y_val = compare(g0,g,1000,normalized=False,sort=sort)
         x.append(x_val)
         y.append(y_val)
     fig,ax = plt.subplots(figsize=(6,5))
@@ -113,7 +113,7 @@ def WFCC(g0, g1, label_g0, labels_g1, colors, log): #g1 is a list of graphs to c
         label.set_fontsize(13)
     if log==True:
         plt.yscale('log')
-    plt.savefig('Outputs_github/'+label_g0+'_vs.png')
+    plt.savefig('./Data_files_hypercubes/Outputs_github/'+label_g0+'_vs.png')
     plt.show()
     for i in range(0, len(x)):
         print("The area under the curve for "+label_g0+" vs "+labels_g1[i]+" is: ", area(g0,g1[i]))
