@@ -65,41 +65,51 @@ def impor(file):
         data[i]=(int(a),int(b),float(c))
     return data
 
-def area(g0,g1,normalized=False, sort=False):
+def area(g0, g1, sort=False, complete=False):
+    if complete:
+        g0, g1 = complete_edges(g0,g1)
     if sort:
         g0.sort(key=lambda x: (x[0], x[1]))
         g1.sort(key=lambda x: (x[0], x[1]))
-    if normalized:
-        return sum([abs(w-g1[i][2]) for i,(s,t,w) in enumerate(g0)])/len(g0)
     return sum([abs(w-g1[i][2]) for i,(s,t,w) in enumerate(g0)])
 
-def compare(g0,g1, resolution = 1000, normalized=False, sort=False):
-    m = len(g0)
+def complete_edges(g0,g1):
+    commonedges = set([(e[0],e[1],0) for e in g0+g1])
+    c0 = list(commonedges - set([(e[0],e[1],0) for e in g0]))
+    c1 = list(commonedges - set([(e[0],e[1],0) for e in g1]))
+    return (g0 + c0,g1 + c1)
+
+def WFCC(g0,g1, fVals = 1000, sort=False, complete = False):
+    if complete:
+        g0, g1 = complete_edges(g0,g1)
+        sort = True
     if sort:
         g0.sort(key=lambda x: (x[0], x[1]))
         g1.sort(key=lambda x: (x[0], x[1]))
+    
     merged = [(min(w,g1[i][2]),max(w,g1[i][2])) for i,(s,t,w) in enumerate(g0)]
-    filt_val = np.linspace(0, max(d for (_,d) in merged), resolution)
-    sym_card = [0 for _ in range(resolution)]
+    try:
+        sCard = [0 for _ in fVals]
+        fVals = np.array(fVals)
+    except:
+        sCard = [0 for _ in range(fVals)]
+        fVals = np.linspace(0, max(d for (_,d) in merged), fVals)
+        
     for p0,p1 in merged:
-        i = bisect_left(filt_val,p0)
-        while filt_val[i]<p1:
-            if filt_val[i]<=p0:
+        i = bisect_left(fVals,p0)
+        while fVals[i]<p1:
+            if fVals[i]<=p0:
                 i += 1
                 continue
-            if normalized:
-                sym_card[i] += float(1/m)
-            if not normalized:
-                sym_card[i] += 1
+            sCard[i] += 1
             i += 1
-    return (filt_val,sym_card)
+    return (fVals,sCard)
 
 
-def WFCC(g0, g1, label_g0, labels_g1, colors, log, sort=False): #g1 is a list of graphs to compare with g0
-    x=[]
-    y=[]
+def WFCCplot(g0, g1, label_g0, labels_g1, colors, log, fVals = 1000, sort=False, complete = False): 
+    x,y = ([],[])
     for g in g1:
-        x_val,y_val = compare(g0,g,1000,normalized=False,sort=sort)
+        x_val,y_val = WFCC(g0,g,fVals = fVals,sort=sort, complete=complete)
         x.append(x_val)
         y.append(y_val)
     fig,ax = plt.subplots(figsize=(6,5))
@@ -116,4 +126,4 @@ def WFCC(g0, g1, label_g0, labels_g1, colors, log, sort=False): #g1 is a list of
     plt.savefig('./Data_files_hypercubes/Outputs_github/'+label_g0+'_vs.png')
     plt.show()
     for i in range(0, len(x)):
-        print("The area under the curve for "+label_g0+" vs "+labels_g1[i]+" is: ", area(g0,g1[i]))
+        print("The area under the curve for "+label_g0+" vs "+labels_g1[i]+" is: ", area(g0,g1[i],sort,complete))
