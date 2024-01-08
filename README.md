@@ -8,6 +8,8 @@ The synthetic hypercubes we considered, with probability and flux weightings, ar
 
 The folder `Data_files_hypercubes` contains all the data files needed. `Klebsiella_clinical_data` is the original real data to run HyperHMM. `Klebsiella` is the folder with the HyperHMM outputs of the continents. `Klebsiella_subsampled` contains the HyperHMM outputs from subsampled clinical data. `Synthetic_data_to_run_HMM_TraPS` contains the synthetic data mimicking clinical data, to be run on HyperHMM and HyperTraPS, and the corresponding outputs are found in `results_synthetic_data` for HyperHMM and `hypertrapsTransMatrices` for HyperTraPS. `Synthetic_data_all_zeros_to_run_HMM_TraPS` is synthetic data mimicking clinical where all samples are the string of all zeros, to be run on HyperHMM and HyperTraPS, and the corresponding outputs are `Hyperhmm_sample_zero` and `Hypertraps_sample_zero`. Lastly, `Outputs_github` is an empty folder to direct there the plots in png form and the data files in csv form that are generated from the code.
 
+`analysis-general.R` supports analysis of anti-microbial resistance data from the BV-BRC database https://www.bv-brc.org . First, visit the page corresponding to a bacterium of interest (for example, *Mycobacterium tuberculosis* here https://www.bv-brc.org/view/Taxonomy/1773#view_tab=genomes). Download the contents of the "Genomes" and "AMR Phenotypes" tables as CSV files. Label them `BVBRC_genome_[label].csv` and `BVBRC_genome_amr_[label].csv` respectively. Then set the label in `analysis-general.R` and run the code from the directory in which the data is saved. 
+
 HyperTraPS was run using https://github.com/StochasticBiology/hypertraps-simple. HyperHMM was run using https://github.com/StochasticBiology/hypercube-hmm. 
 
 ### Citation
