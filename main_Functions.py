@@ -61,6 +61,7 @@ def impor(file):
     while data[-1]=='':
         data.pop(-1)
     for i,d in enumerate(data):
+        d = d.replace(',', ' ')
         a,b,c = d.split()
         data[i]=(int(a),int(b),float(c))
     return data
