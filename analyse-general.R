@@ -175,6 +175,12 @@ png(paste0("all-plots-country-smaller-", species.label, ".png"), width=2000*sf, 
 print(g.countries)
 dev.off()
 
+plots.cs.nolegend = list()
+for(i in 1:length(uniq.countries)) {
+  plots.cs.nolegend[[i]] = plot.hypercube.flux(ordered.cs[[i]], thresh=plot.thresh.cs) + 
+    ggtitle(ordered.labels[i]) + theme(legend.position = "none")
+}
+
 # output full sets of transitions 
 pruned.df = data.frame()
 for(i in 1:length(output.inf.cs)) {
@@ -291,12 +297,12 @@ for(i in 1:length(test.names)) {
 
 # plot WFCC in log space
 g.wfcc.log = ggplot(res.df[res.df$fVals > 0,], aes(x=fVals, y=WFCC, color=factor(test, levels=test.names))) + 
-  geom_line(linewidth=3, alpha=0.5) + 
+  geom_step(linewidth=3, alpha=0.5, direction="hv") + 
   scale_y_log10() + theme_light() 
 
 # plot zoomed-in WFCC in lin space
 g.wfcc.lin = ggplot(res.df[res.df$fVals >= 0,], aes(x=fVals, y=WFCC, color=factor(test, levels=test.names))) + 
-  geom_line(linewidth=1, alpha=1) + coord_cartesian(xlim = c(-0.001,0.025)) +
+  geom_step(linewidth=1, alpha=1, direction="hv") + coord_cartesian(xlim = c(-0.001,0.025)) +
   theme_light()
 
 sf = 3
