@@ -298,16 +298,21 @@ for(i in 1:length(test.names)) {
 # plot WFCC in log space
 g.wfcc.log = ggplot(res.df[res.df$fVals > 0,], aes(x=fVals, y=WFCC, color=factor(test, levels=test.names))) + 
   geom_step(linewidth=3, alpha=0.5, direction="hv") + 
-  scale_y_log10() + theme_light() 
+  scale_y_log10() + labs(color="Country") + theme_light() 
 
 # plot zoomed-in WFCC in lin space
 g.wfcc.lin = ggplot(res.df[res.df$fVals >= 0,], aes(x=fVals, y=WFCC, color=factor(test, levels=test.names))) + 
   geom_step(linewidth=1, alpha=1, direction="hv") + coord_cartesian(xlim = c(-0.001,0.025)) +
-  theme_light()
+  labs(color="Country") + theme_light()
 
 sf = 3
 png(paste0("WFCC-", species.label, ".png"), width=1000*sf, height=500*sf, res=72*sf)
 print(ggarrange(g.wfcc.log, g.wfcc.lin))
+dev.off()
+
+sf = 3
+png(paste0("WFCC-lin-", species.label, ".png"), width=600*sf, height=400*sf, res=72*sf)
+print(g.wfcc.lin)
 dev.off()
 
 # interrogate some particular instances.
