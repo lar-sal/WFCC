@@ -1,6 +1,7 @@
 # need these libraries for plotting, but not generation
 library(ggraph)
 library(igraph)
+library(ggpubr)
 
 # given a data frame with From, To, P[robability] columns, work out the fluxes through each edge
 # i.e. P*source node probability
