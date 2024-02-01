@@ -15,7 +15,7 @@ HyperTraPS was run using https://github.com/StochasticBiology/hypertraps-simple.
 ### Citation
 If one uses the WFCC algorithm, it can be cited as
 
-@article {Garc{\'\i}a Pascual2024.01.29.577802,
+	@article {Garc{\'\i}a Pascual2024.01.29.577802,
 
 	author = {Bel{\'e}n Garc{\'\i}a Pascual and Lars M Salbu and Jessica Renz and Konstantinos Giannakis and Iain Johnston},
  
