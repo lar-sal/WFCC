@@ -2,7 +2,7 @@
 Code for the algorithm Weight-Filtration Comparison Curve (WFCC) to compare weighted graphs with equal labelled vertices and edges, but different weightings. The algorithm takes as inputs the graphs in the form of lists of tuples (start vertex, end vertex, weight) corresponding to edges. The algorithm outputs a curve visualising the number of non-common edges over an edge-filtration. 
 
 ## Description of files
-The WFCC algorithm and auxiliary code are found in `main_Functions.py`. An example of how to use the algorithm is in `Example_WFCC.ipynb`, there, one can introduce their data files in cell [2] '#open datafiles' and proceed with the comparison.
+The WFCC algorithm and auxiliary code are found in `main_Functions.py`. An example of how to use the algorithm is in `Example_WFCC.ipynb`, there, one can introduce their data files in cell [1] '#open datafiles' and proceed with the comparison.
 
 The synthetic hypercubes we considered, with probability and flux weightings, are obtained in `diff-cubes.R`. The file `main.ipynb` contains the code explained, and it reproduces all the figures and computations in the main text of the paper, except for the MDS. The MDS are produced in `mds.R` and in `analysis-general.R`. 
 
