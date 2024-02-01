@@ -16,13 +16,22 @@ HyperTraPS was run using https://github.com/StochasticBiology/hypertraps-simple.
 If one uses the WFCC algorithm, it can be cited as
 
 @article {Garc{\'\i}a Pascual2024.01.29.577802,
+
 	author = {Bel{\'e}n Garc{\'\i}a Pascual and Lars M Salbu and Jessica Renz and Konstantinos Giannakis and Iain Johnston},
+ 
 	title = {Comparing structure and dynamics of transition graphs by the symmetric difference metric over an edge-filtration},
+ 
 	elocation-id = {2024.01.29.577802},
+ 
 	year = {2024},
+ 
 	doi = {10.1101/2024.01.29.577802},
+ 
 	publisher = {Cold Spring Harbor Laboratory},
+ 
 	URL = {https://www.biorxiv.org/content/early/2024/01/31/2024.01.29.577802},
+ 
 	eprint = {https://www.biorxiv.org/content/early/2024/01/31/2024.01.29.577802.full.pdf},
+ 
 	journal = {bioRxiv}
 }
